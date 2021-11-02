@@ -1,14 +1,16 @@
 function adicionarFilme() {
   var campoFilmeFavorito = document.querySelector('#filme')
   var filmeFavorito = campoFilmeFavorito.value//Tirando as tags do HTML e exibindo apenas o há escrito dentro do campo de endereço da imagem
+  var erroFilmeAdicinado = document.querySelector('#erro-adiciona-filme')
 
   //Se a variável filmeFavorito for do tipo texto e terminar com outro texto que tenha a extensão .jpg
   if (filmeFavorito.endsWith('.jpg')) {
     listarFilmesNaTela(filmeFavorito)
+    erroFilmeAdicinado.innerHTML = ""
   }
   //Se terminar com outro tipo de extensão (que não seja .jpg), o filme não é exibido
   else {
-    alert("Imagem não encontrada! Digite apenas imagens que tenham o link com a extensão .jpg/ Exemplo: https://m.media-amazon.com/images/M/MV5BMTk0NzcxMjYwNF5BMl5BanBnXkFtZTcwMTI4MTIxMw@@._V1_UX182_CR0,0,182,268_AL_.jpg")
+    erroFilmeAdicinado.innerHTML = "Imagem não encontrada! Digite apenas imagens que tenham o link com a extensão .jpg/ Exemplo: https://m.media-amazon.com/images/M/MV5BMTk0NzcxMjYwNF5BMl5BanBnXkFtZTcwMTI4MTIxMw@@._V1_UX182_CR0,0,182,268_AL_.jpg"
   }
 
   campoFilmeFavorito.value = ""

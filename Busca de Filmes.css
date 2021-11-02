@@ -84,7 +84,9 @@ a{
 }
   
 #listarFilmes img{
+  width: 20rem;
   margin: 1rem;
+  border-radius: 5px;
 }
 
 .menus-filmes ul,.container-buttons-venom,#listarFilmes{
@@ -127,8 +129,13 @@ a{
   font-size: 1rem;
 }
 
+#erro-adiciona-filme{
+  color: var(--color-two);
+  margin: 1rem 0;
+}
+
 .form-wrapper {
-   margin: 0 0 15px;
+  margin: 0 0 15px;
 }
   
 .form-wrapper input {
