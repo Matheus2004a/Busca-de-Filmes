@@ -4,31 +4,121 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-compatible" content="ie=edge">
-	<link rel="stylesheet" href="Busca de Filmes.css">
-    <title>Busca de filmes usando funções</title>
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <link rel="stylesheet" href="Busca de Filmes.css">
+    <title>Busca de filmes usando funções - Refatorando o Aluraflix</title>
 </head>
 
 <body>
+    <a name="top-page"></a>
+    <header>
+        <h1 class="page-title">Aluraflix</h1>
+        <input type="search" id="barra-pesquisa" placeholder="Pesquise seu filmes e séries favoritos">
+        <!-- <i class="fas fa-search lupa-pesquisa" alt="alternative text for the liked image" title="Fazer pesquisa"></i> -->
+        <button type="submit" class="button-login">Login</button>
+    </header>
+
+    <nav class="menus-filmes">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Séries</a></li>
+            <li><a href="">Filmes</a></li>
+            <li><a href="">Minha Lista</a></li>
+        </ul>
+    </nav>
+
+    <!--Container logo Imersão Dev, input de endereço de imagem e botão adicionar filme-->
     <div class="container">
-        <h1 class="page-title">
-            Aluraflix
-        </h1>
-        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo"
-            alt="">
-        <p class="page-subtitle">
-            Qual seu filme favorito?
-        </p>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo" alt="">
+        <p class="page-subtitle">Qual seu filme favorito?</p>
         <div class="form-wrapper">
-            <input type="text" id="filme" name="filme" placeholder="Insira endereço de imagem">
+            <input type="text" id="filme" name="filme" placeholder="Insira endereço de imagem" autofocus>
             <button onClick="adicionarFilme()">Adicionar Filme</button>
         </div>
     </div>
-    <div id="listaFilmes"></div>
-    <a href="https://alura.com.br/" target="_blank">
-        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+
+    <div id="listarFilmes"></div>
+
+    <section class="capa-filme-venom">
+        <h2>Mais assistido</h2>
+        <img src="https://www.soudesergipe.com.br/wp-content/uploads/2018/10/capa-filme-Venom-soudesergipe.jpg">
+        <p>Um repórter fracassado está ligado a uma entidade alienígena, um dos muitos simbiotes que invadiram a Terra. Mas o ser gosta da Terra e decide protegê-la.</p>
+
+        <span class="container-buttons-venom">
+            <a href="https://www.youtube.com/watch?v=EQxCycVTfcU" target="_blank">
+                <button type="submit">Assistir trailer</button>
+            </a>
+            <a href="">
+                <button type="submit">
+                    Mais informações
+                    <i class="fas fa-info-circle" alt="Mais informações do filme"></i>
+                </button>
+            </a>
+        </span>
+    </section>
+
+    <section class="seção-prévias-filmes">
+        <h2>Prévias</h2>
+        <article>
+            <a href="">
+                <figure>
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjYxYmRlZWYtMzAwNC00MDA1LWJjNTItOTBjMzlhNGMzYzk3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                        class="img-prévias-filmes">
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                        class="img-prévias-filmes">
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                    <img src="https://m.media-amazon.com/images/M/MV5BZDE3YjY5MzEtYzJlYS00ZjgyLWIzYWUtZmU4Mjk4Y2JhOTQwXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_UY268_CR0,0,182,268_AL_.jpg"
+                        class="img-prévias-filmes">
+                </figure>
+            </a>
+
+            <a href="">
+                <figure>
+                    <img src="https://m.media-amazon.com/images/M/MV5BODJjNmExM2EtMDAyNC00MzAxLWFlZjctMmNjZjc4MmUyODliXkEyXkFqcGdeQXVyMTIyNjkwOTEz._V1_UY268_CR4,0,182,268_AL_.jpg"
+                        class="img-prévias-filmes">
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTc0M2YwNDQtNjIzNi00NjU4LThhZDgtM2VkODYxNDgzM2Q0XkEyXkFqcGdeQXVyOTA1NTMzNjU@._V1_UY268_CR4,0,182,268_AL_.jpg"
+                        class="img-prévias-filmes">
+                </figure>
+            </a>
+
+            <a href="">
+                <figure>
+                    <img src="https://m.media-amazon.com/images/M/MV5BOTY4NDcyZGQtYmVlNy00ODgwLTljYTMtYzQ2OTE3NDhjODMwXkEyXkFqcGdeQXVyNzYzODM3Mzg@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                        class="img-prévias-filmes">
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                    <img src="https://m.media-amazon.com/images/M/MV5BYjQ1NzRhYjYtMWY3My00ODA0LTk5ZDctYjQ4YjE0M2RhMGNiXkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                        class="img-prévias-filmes">
+                </figure>
+            </a>
+            <a href="">
+                <figure>
+                    <img src="https://m.media-amazon.com/images/M/MV5BOGU0OWQyMjItYzA4Zi00MDFiLThiZWQtZmEyNWRiODAzYzNmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"
+                        class="img-prévias-filmes">
+                </figure>
+            </a>
+        </article>
+    </section>
+
+    <a href="#top-page">
+        <button class="return-topo"><i class="fas fa-angle-up"></i></button>
     </a>
 
     <script src="Busca de Filmes.js"></script>
+    <script src="https://kit.fontawesome.com/798bcbaf05.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

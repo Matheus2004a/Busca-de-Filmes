@@ -1,66 +1,296 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --color-one: #ffffff;
+  --color-two: #e50914;
+  --color-three: #000000;  
+}
+
+html{
+	scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
-    font-family: 'Roboto Mono',monospace;
-    text-align:center;
-    background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-04-aluraflix-e-filmes.png');
-    background-color: #000000;
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-  }
+  font-family: 'Roboto Mono',monospace;
+  background-color: var(--color-three);
+  background-size: cover;
+  background-position: center top;
+}
+
+header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+}
+
+a{
+	text-decoration:none;
+}
+
+#barra-pesquisa {
+  width: 30%;
+  height: 40px;
+  padding: 3px;
+  font-size: 18px;
+  text-indent: 10px;
+  outline: none;
+  border-radius: 7px;
+  margin: 15px 5%;
+  position: relative;
+}
   
-  .container {
-    text-align: center;
-    padding: 20px;
-  }
+#barra-pesquisa:focus{
+  border: 2px solid var(--color-two);
+  transition: 0.2s ease-in-out;
+}
   
-  .page-title {
-    color: #ffffff;
-    margin: 0 0 5px;
-  }
+.lupa-pesquisa {
+  position: absolute;
+  right: 32%;
+  font-size: 18px;
+  cursor: pointer;
+}
   
-  .page-subtitle {
-    color: #ffffff;
-    margin-top: 5px;
-  }
+/*Centralizando a logo da Imersão Dev, campo de entrada de link de imagens e botão de adicionar filmes*/
+.container {
+  text-align: center;
+  padding: 20px;
+}
   
-  .page-logo {
-    width: 200px;
-  }
+.page-title {
+  color: var(--color-one);
+  margin: 0 0 5px;
+}
   
-  .alura-logo {
-    width: 40px;
-    position: absolute;
-    top: 10px;
-    right:10px;
-  }
+ /*Posicionando a logo à esquerda*/ 
+.page-title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3rem;
+  color: var(--color-two);
+}
   
-  #listaFilmes img {
-    margin: 10px;
-  }
+.page-logo {
+  width: 20rem;
+}
   
-  .form-wrapper {
-    margin: 0 0 15px;
-  }
+#listaFilmes img {
+  margin: 10px;
+}
+
+.menus-filmes ul,.container-buttons-venom{
+  display: flex;
+  justify-content: center;
+}
+
+.menus-filmes ul li{
+  list-style: none;
+  margin: 5% 3%;
+}
+
+.menus-filmes ul li a{
+  font-size: 20px;
+  color: var(--color-one);
+}
+
+/*Posicionando o botão de login no topo e à direita da página*/
+.button-login {
+  width: 5.30rem;
+  height: 2.2rem;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  color: var(--color-two);
+  background: var(--color-one);
+  border: none;
+  font-size: 18px;
+}
+
+.button-login:hover{
+  color: var(--color-one);
+  background: var(--color-two);
+  transition: 0.5s;
+}
+
+#filme{
+  width: 15rem;
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+.form-wrapper {
+   margin: 0 0 15px;
+}
   
-  .form-wrapper input {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 15px;
-  }
+.form-wrapper input {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.form-wrapper input:focus{
+  outline: none;
+}
+
+.form-wrapper button {
+  border: none;
+  color: var(--color-one);
+  background: var(--color-two);
+  font-weight: bold;
+  padding: 15px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .3s;
+}
   
-  .form-wrapper button {
-    border: 0;
-    color: #ffffff;
-    background: #DA1E26;
-    font-weight:bold;
-    padding: 15px 20px;
-    font-size: 16px;
-    border-radius: 4px;
-    margin-top: 20px;
-    cursor: pointer;
-    transition: .3s;
-  }
-  
-  .form-wrapper button:hover {
-    opacity:.8;
-  }
+.form-wrapper button:hover {
+  opacity: 0.8;
+}
+
+.form-wrapper button:focus{
+  outline: none;
+}
+
+/*Centralizando a logo da Imersão Dev*/
+.logo-imersao-dev {
+  height: auto;
+  position: absolute;
+  top: 17%;
+  right: 41%;
+}
+
+.capa-filme-venom{
+  display: grid;
+  justify-content: center;
+}
+
+.capa-filme-venom img{
+	height: 40rem;
+	object-fit: cover;
+	margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+/*Alinhando o subtítulo da capa do filme Venom à esquerda*/
+.capa-filme-venom h2{
+  color: var(--color-one);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 0.85rem 5%;
+}
+
+.capa-filme-venom p{
+  font-size: 1.2rem;
+  color: var(--color-one);
+  text-align: left;
+  margin: 0 5%;
+}
+
+.capa-filme-venom a{
+	text-decoration:none;
+}
+
+/*Fazendo o apontamento do botão. Usando margem para distanciamento entre os botões e o texto de descrição do filme*/
+.capa-filme-venom button {
+  border: none;
+  width: 10rem;
+  height: 3rem;
+  font-size: 1rem;
+  color: var(--color-one);
+  background: var(--color-three);
+  cursor: pointer;
+  margin: 3rem 0rem;
+  border-radius: 10rem;
+  border: 1px solid var(--color-one);
+}
+
+/*Ao passar o mouse sobre o botão há inversão de cores de fundo com a cor da fonte*/
+.capa-filme-venom button:hover{
+  color: var(--color-three);
+  background: var(--color-one);
+  transition: 0.5s;
+}
+
+.capa-filme-venom:focus{
+  outline: none;
+}
+
+.container-buttons-venom button{
+  margin: 5rem 0.5rem;
+}
+
+.container-buttons-venom button i{
+  font-size: 1rem;
+}
+
+.seção-prévias-filmes{
+  margin-bottom: 5%;
+}
+
+.seção-prévias-filmes article{
+  display: flex;
+  justify-content: space-around;
+}
+
+/*Alinhando o subtítulo Prévias dos filmes à direita*/
+.seção-prévias-filmes h2{
+  color: var(--color-one);
+  text-align: left;
+  margin: 12px 50px;
+}
+
+/*As imagens de prévias dos filmes aparecem na horizontal*/
+.img-prévias-filmes{
+  width: 8rem;
+  height: 8rem;
+  clip-path: circle();
+  background: var(--color-one);
+  cursor: pointer;
+}
+
+.img-prévias-filmes:hover{
+  opacity: 0.9;
+}
+
+.return-topo {
+  width: 2.2rem;
+  height: 2.2rem;
+  clip-path: circle();
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  transform: translateY(100px);
+  transition: 0.5s ease-in-out;
+}
+
+.return-topo.show{
+  transform: translateY(0);
+}
+
+.return-topo i{
+  font-size: 1.2rem;
+  padding: 5px 0;
+}
+
+body > img {
+  margin: 8% 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*Ao passar o mouse sobre as imagens dos filmes fica mais opaca a imagem*/
+body > img:hover{
+  opacity: 0.9;
+}
