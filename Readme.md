@@ -1,4 +1,4 @@
-# Busca de Filmes
+# Projeto de busca de filmes
 
 Projeto em que contém funcionalidades para imprimir filmes na tela a partir do seu link fornecido no campo de busca. 
 
