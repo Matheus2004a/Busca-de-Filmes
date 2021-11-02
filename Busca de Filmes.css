@@ -78,12 +78,16 @@ a{
 .page-logo {
   width: 20rem;
 }
+
+#listarFilmes{
+  flex-wrap: wrap;
+}
   
-#listaFilmes img {
-  margin: 10px;
+#listarFilmes img{
+  margin: 1rem;
 }
 
-.menus-filmes ul,.container-buttons-venom{
+.menus-filmes ul,.container-buttons-venom,#listarFilmes{
   display: flex;
   justify-content: center;
 }
