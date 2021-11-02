@@ -7,3 +7,7 @@ Projeto em que contém funcionalidades para imprimir filmes na tela a partir do 
 Contudo pretendo trazer novas funcionalidades para imprimir filmes ou até mesmo imagens que tenham uma extensão distinta também.
 
 **O foco do projeto mesmo é dar ênfase na adição dos filmes, mas procurei deixar um layout um pouco parecido com o da Netflix.**
+
+# Resultado
+
+<img src="Listagem-Filmes.gif">
